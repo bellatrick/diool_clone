@@ -127,7 +127,8 @@
 @media (max-width: 760px) {
   .header_buttons {
     flex-direction: column;
-    margin-left: -40px;
+    place-items: center;
+    margin-left: -150px;
   }
   .header_buttons button {
     margin: 20px auto;
@@ -146,6 +147,9 @@
     object-fit: contain;
     max-width: 300px;
   }
+  .img_container_small{
+    max-width: 300px;
+  }
   .section h1 {
     font-size: 30px;
     line-height: 36px;
@@ -158,5 +162,8 @@
     margin: 20px auto;
     width: 300px;
     text-align: center;
+  }
+  .header_buttons {
+    margin-left: -100px;
   }
 }
