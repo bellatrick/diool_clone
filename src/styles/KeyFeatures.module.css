@@ -1,0 +1,118 @@
+.container {
+  background: #dcedf1;
+  position: relative;
+  z-index: 0;
+  top: -220px;
+}
+.features_container {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  padding-bottom: 40px;
+}
+.features_container h3 {
+  color: #1e2b2f;
+  font-size: 23px;
+  line-height: 31px;
+  letter-spacing: -0.9;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.features_container p {
+  color: #405261;
+  font-size: 18px;
+  letter-spacing: -0.5;
+  width: 90%;
+  margin-bottom: 40px;
+  line-height: 32px;
+}
+.features {
+  margin: 50px 90px;
+}
+.features_header h2 {
+  padding-top: 100px;
+  color: #1e2b2f;
+  letter-spacing: 0.2px;
+  line-height: 48px;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.features_header p {
+  color: #405261;
+  line-height: 32px;
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+.features_container img {
+  margin-bottom: 20px;
+}
+.leftstripe {
+  position: absolute;
+  left: 0px;
+  top: -140px;
+}
+.rightstripe {
+  position: absolute;
+  left: 55%;
+  top: -130px;
+}
+.clip {
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+@media (max-width: 1200px) {
+    .container {
+        position: relative;
+        z-index: 0;
+        top: 0px;
+      }
+      .features_container h3 {     
+        font-size: 20px;
+       
+      }
+      .rightstripe {
+        position: absolute;
+        left: 50%;
+        top: -100px;
+      }
+      .features_container p {  
+        font-size: 16px;
+      
+      }
+      .features_header h2 {
+       
+        font-size: 30px;
+        margin-bottom: 16px;
+      }
+      .features_header p {      
+        font-size: 16px;
+      }
+      .features {
+        margin: 50px 20px;
+      }
+     
+}
+
+@media (max-width: 960px) {
+    .rightstripe {
+      display: none;
+      }
+}
+@media (max-width: 830px) {
+    .features_container {
+     flex-direction: column;
+     place-content: center;
+     align-items: flex-start;
+   
+      }
+      .leftstripe, .clip{
+          display: none;
+      }
+      .features {
+        margin: 50px 70px;
+      }
+    
+    
+}

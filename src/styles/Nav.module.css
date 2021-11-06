@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+header {
+  height: 90px;
+  background: #f7e8c1;
+}
+.inner_width {
+  padding: 0 100px;
+  margin: auto;
+}
+.navigation {
+  display: flex;
+  place-items: center;
+  float: right;
+  min-height: 90px;
+}
+.nav_item {
+  display: flex;
+  place-items: center;
+  margin-left: 10px;
+  position: relative;
+  font-size: 19px;
+  cursor: pointer;
+  padding: 30px 15px;
+}
+.popup {
+  position: absolute;
+  top: 120px;
+  z-index: 10;
+  display: none;
+  color: black;
+  padding: 15px;
+  background: white;
+  line-height: 30px;
+  width: 280px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: all 5s ease-in-out;
+}
+.popup::after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.nav_item p {
+  font-weight: 100;
+}
+.nav_item_FR {
+  font-size: 16px;
+}
+.nav_item p:hover {
+  color: coral;
+}
+.popup_content:hover .popup {
+  display: block;
+}
+.logo {
+  padding: 30px 0;
+}
+
+.nav_item button,
+.nav_item_button {
+  background-color: #3fb183;
+  color: #ffffff;
+  padding: 17px 80px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.nav_item button:hover {
+  opacity: 0.9;
+}
+
+.mobile_menu {
+  display: none;
+  background: #f7e8c1;
+}
+.toggle_button {
+  height: 90px;
+  line-height: 90px !important;
+  display: none;
+}
+.menu {
+  display: flex;
+  line-height: 90px !important;
+  height: 90px;
+  place-items: center;
+}
+.mobile_navigation_menu {
+  display: none;
+  z-index: 100;
+}
+.mobile_nav_detail_div {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+  align-items: center;
+}
+.mobile_nav_detail_div img {
+  margin-right: 10px;
+}
+.mobile_nav_detail_div p,
+.mobile_nav_bottom p {
+  font-size: 19px;
+  color: #3e4462;
+  cursor: pointer;
+}
+.mobile_nav_detail_div p:hover {
+  color: coral;
+}
+
+@media screen and (max-width: 1200px) {
+  .navigation {
+    display: flex;
+  }
+ 
+  .nav_item {
+    padding: 30px 0px;
+  }
+}
+@media screen and (max-width: 1000px) {
+}
+@media screen and (max-width: 960px) {
+  .toggle_button {
+    display: block;
+    cursor: pointer;
+    color: #3e4462;
+  }
+  .inner_width {
+    display: none;
+  }
+  .mobile_nav_detail_div {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .mobile_nav_detail_div img {
+    margin-right: 10px;
+  }
+  .mobile_nav_detail_div p,
+  .mobile_nav_bottom p {
+    font-size: 19px;
+    color: #3e4462;
+    cursor: pointer;
+  }
+  .mobile_nav_detail_div p:hover {
+    color: coral;
+  }
+  .mobile_nav_bottom p:hover {
+    color: coral;
+  }
+  .mobile_menu {
+    display: flex;
+    background: #f7e8c1;
+    place-items: center;
+    padding: 10px 80px;
+    justify-content: space-between;
+  }
+  .menu p {
+    margin-right: 20px;
+  }
+  .fade-in {
+    animation: fadeIn 4s;
+      opacity: 1;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+     opacity: 1;
+    }
+  }
+
+  .mobile_navigation_menu {
+    position: absolute;
+    width: 100%;
+    background: #f7e8c1;
+    opacity: 1;
+    top: 90px;
+    z-index: 1000 !important;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+    transition: all 0.1s;
+    display: block;
+    padding: 0px 40px;
+
+    box-sizing: border-box;
+  }
+  .mobile_nav_item {
+    margin-top: 60px;
+  }
+  .mobile_nav_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-items: center;
+    place-self: center;
+
+    margin: 30px auto;
+  }
+
+  .nav_item_button {
+    width: 70%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .nav_item_button:hover {
+    opacity: 0.88;
+  }
+  .mobile_nav_item_p {
+    font-size: 12px;
+    color: rgb(128, 126, 126);
+    margin-bottom: 17px;
+    font-weight: 800;
+  }
+  .mobile_nav_detail p {
+    margin-top: 10px;
+  }
+  hr {
+    border: 1px solid rgb(212, 210, 210);
+  }
+}
+@media screen and (max-width: 500px) {
+  .mobile_menu {
+    padding: 10px 30px;
+  }
+}
